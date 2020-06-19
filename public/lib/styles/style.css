@@ -1,0 +1,140 @@
+  body {
+    margin: 0;
+    background: #3797a4;
+    color: #fcf876;
+  }
+  
+  .fa-sticky-note {
+    color: #e4e4e4;
+  }
+  
+  .nav-container {
+    text-align: center;
+    margin: 0 auto;
+    background: #393e46;
+  }
+  
+  ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 0.2em;
+    padding: 0.5em;
+  }
+  
+  a {
+    color: snow;
+    text-decoration: none;
+    height: 100%;
+  }
+  
+  .end {
+    margin-left: auto;
+  }
+  
+  li:hover,
+  .active {
+    font-weight: bolder;
+    background-color: rgb(120, 120, 121);
+    color: white;
+  }
+  
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media only screen and (max-width: 375px) {
+    body {
+      font-size: 0.7em;
+    }
+  }
+  
+  .icon {
+    margin: 1em auto;
+    display: inline-flex;
+    border-top: 5px solid #fcf876;
+    border-right: 2px solid #393e46;
+    border-bottom: 2px solid #393e46;
+    border-left: 2px solid #393e46;
+    padding: 0.5em;
+  }
+  
+  .fa-check {
+    font-size: 2.5em;
+    color: #fcf876;
+  }
+  
+  .d-flex {
+    margin: 1em auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .field,
+  .btn {
+    width: 100%;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #342b38;
+    color: #e4e4e4;
+    border-radius: 1em;
+  }
+  
+  .btn:hover {
+    color: #e4e4e4;
+    background: #57485e;
+  }
+  
+  .field {
+    line-height: 2em;
+    outline: none;
+    border: none;
+    font-size: 1.3em;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin: 0 0.2em;
+    width: 90%;
+  }
+  
+  .notes-main {
+    background: #ffcb74;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+  }
+  
+  .card {
+    outline: none;
+  }
+  
+  .card-header {
+    background: #393e46;
+  }
+  
+  .card-body {
+    background: #3797a4;
+  }
+  
+  hr {
+    border-width: 3px solid #cf7500;
+    max-width: 75%;
+  }
+  
+  .row {
+    line-height: 2em;
+    font-size: 1.3em;
+  }
+  
+  .item {
+    padding: 1em;
+    line-height: 2em;
+    font-size: 1.2em;
+    font-weight: 100;
+  }
