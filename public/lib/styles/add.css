@@ -14,3 +14,13 @@ form,
   display: flex;
   flex-direction: column;
 }
+
+button{
+
+  margin: auto;
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+  
+}
