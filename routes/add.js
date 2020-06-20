@@ -8,7 +8,7 @@ routerAdd.get('/' , (req,res) => {
 
 routerAdd.post('/',(req,res) => {
     console.log(req.body);
-    res.redirect('/');
+    res.redirect('/add');
     
 });
 

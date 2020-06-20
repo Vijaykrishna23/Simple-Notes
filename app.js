@@ -1,8 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const dotEnv = require('dotenv');
 
-const routerHome = require("./routes/home");
+const routerHome = require("./routes/index");
 const routerAdd = require("./routes/add");
+
+dotEnv.config('./config/config');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
