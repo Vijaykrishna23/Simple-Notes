@@ -1,10 +1,11 @@
-const routerHome = require('express').Router();
+const routerIndex = require("express").Router();
+const Note = require("../model/Note");
 
-routerHome.get('/' , (req,res) => {
-    res.render('./html/landing.ejs');
+routerIndex.get("/", (req, res) => {
+  Note.find({}, (err, allNotes) => {
+    console.log(allNotes);
+    res.render("./html/landing.ejs", { notes: allNotes });
+  }).catch((err) => console.log(err));
 });
 
-
-
-module.exports = routerHome;
-
+module.exports = routerIndex;

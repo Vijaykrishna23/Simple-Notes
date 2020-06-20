@@ -1,5 +1,6 @@
 const routerAdd = require('express').Router();
 
+const Note = require('../model/Note');
 
 
 routerAdd.get('/' , (req,res) => {
@@ -7,7 +8,16 @@ routerAdd.get('/' , (req,res) => {
 });
 
 routerAdd.post('/',(req,res) => {
+  
+   
+    const newNote = {
+        title : req.body.title,
+        description : req.body.description
+    };
     console.log(req.body);
+
+    Note.create(newNote);
+
     res.redirect('/add');
     
 });

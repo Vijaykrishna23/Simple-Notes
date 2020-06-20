@@ -2,10 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const dotEnv = require('dotenv');
 
-const routerHome = require("./routes/index");
+const routerIndex = require("./routes/index");
 const routerAdd = require("./routes/add");
+const connectDB = require('./config/db');
 
-dotEnv.config('./config/config');
+
+dotEnv.config({path:'./config/config.env'});
+
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,7 +21,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-app.use("/", routerHome);
+app.use("/", routerIndex);
 app.use("/add", routerAdd);
 
 // app.get("/", (req, res) => {
