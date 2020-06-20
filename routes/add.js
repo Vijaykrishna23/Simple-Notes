@@ -18,7 +18,7 @@ routerAdd.post('/',(req,res) => {
 
     Note.create(newNote);
 
-    res.redirect('/add');
+    res.redirect('/');
     
 });
 
