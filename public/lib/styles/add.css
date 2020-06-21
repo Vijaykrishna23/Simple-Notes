@@ -1,11 +1,8 @@
 form,
-.row,
-.input,
-.text {
-  margin: 0 auto;
-  padding: 1em;
+.text,
+.input {
+  padding: 20px;
   border-radius: 1em;
-  border: none;
   outline: none;
 }
 
@@ -15,12 +12,9 @@ form,
   flex-direction: column;
 }
 
-button{
-
+button {
   margin: auto;
+  position: relative;
   padding: 1em;
   border-radius: 1em;
-  border: none;
-  outline: none;
-  
 }

@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs'); -%>
+
+<div class="container">
+  <main>
+    <% notes.forEach(note => { %>
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+      <div class="card-body text-success">
+        <h5 class="card-title">
+          <%= note.title %> 
+        </h5>
+        <p class="card-text">
+          <%= note.description %> 
+        </p>
+      </div>
+      <div class="card-footer bg-transparent border-success">Last Modified</div>
+    </div>
+    <% }) %>  
+
+   
+
+    <a href="/add"> <button type="button" class="btn btn-dark">Add</button> </a>
+  </main>
+</div>
+
+<%- include('../partials/footer.ejs'); -%>
