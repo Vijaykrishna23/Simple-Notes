@@ -5,8 +5,9 @@ const connectDB = () => {
     .connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useFindAndModify : true
     })
     .then(() => console.log("mongodb connected"))
-    .catch(() => console.log("mongodb not connected error"));
+    .catch((err) => console.log("mongodb not connected error" + err));
 };
 module.exports = connectDB;

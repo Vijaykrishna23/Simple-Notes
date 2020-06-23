@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs'); -%>
+  <link rel="stylesheet" href="/styles/readmore.css">
+  <div class="container">
+    <section>
+      <form action="/notes/<%= id %>/edit" method="POST">
+        <div class="container">
+          <div class="title">
+            <input type="hidden" name="_method" value="PUT">
+            <input class="input" type="text" name="title" value= "<%= title %>" > 
+            <br>
+            <textarea class="text" name="description" cols="30 " rows="10 " ><%= description %> </textarea>
+            <br>
+            <button type="submit" class="btn btn-dark">Update</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+  <%- include('../partials/footer.ejs'); -%>

@@ -1,7 +1,6 @@
 const routerAdd = require("express").Router();
 
 const Note = require("../model/Note");
-let t = "Enter title";
 
 routerAdd.get("/", (req, res) => {
   res.render("./html/add.ejs", { title: "Title", description: "Description" });
