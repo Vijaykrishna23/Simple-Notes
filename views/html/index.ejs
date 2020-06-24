@@ -2,7 +2,7 @@
 
 <div class="container">
   <main>
-    <% notes.forEach(note => { %>
+  <% notes.forEach(note => { %>
     <div class="card border-success mb-3" style="max-width: 18rem;">
       <div class="card-body text-success">
         <h5 class="card-title">
@@ -13,14 +13,18 @@
         </p>
 
         <h6 class="card-title">
-          Last modified
+          Last Modified : <%= formatDate(note.modified) %>
         </h6>
       </div>
       <div class="card-footer bg-transparent border-success">
-        <a href="/notes/<%= note._id %>" class="btn btn-primary">Read More</a>
+        <form action="/delete/<%= note._id %> " method="post">
+          <input type="hidden" name="_method" value="DELETE" />
+          <a href="/edit/<%= note._id %>" class="btn btn-primary">Read More</a>
+          <input class="btn btn-primary" type="submit" value="Delete" />
+        </form>
       </div>
-    </div>  
-    <% }) %>
+    </div>
+    <% }) %> 
 
     <a href="/add"> <button type="button" class="btn btn-dark">Add</button> </a>
   </main>
