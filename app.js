@@ -5,8 +5,12 @@ const methodOverride = require('method-override');
 
 const routerIndex = require("./routes/index");
 const routerAdd = require("./routes/add");
-const routerReadMore = require("./routes/readmore");
+const routerEdit = require("./routes/edit");
+const routerDelete = require("./routes/delete");
 const connectDB = require('./config/db');
+const routerError = require("./routes/error");
+const router = require("./routes");
+
 
 
 dotEnv.config({path:'./config/config.env'});
@@ -25,7 +29,6 @@ app.use(express.static("public/lib"));
 
 app.use(methodOverride(function (req, res) {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-    // look in urlencoded POST bodies and delete it
     var method = req.body._method
     delete req.body._method
     return method
@@ -33,28 +36,17 @@ app.use(methodOverride(function (req, res) {
 }));
 
 
-app.use("/", routerIndex);
-app.use("/add", routerAdd);
-app.use("/notes",routerReadMore);
+app.use(router);
 
-// app.get("/", (req, res) => {
-//   res.render("./html/landing.ejs");
-// });
-// app.get("/add", (req, res) => {
-//   // res.send("add a note");
-//   res.render("./html/add.ejs");
-// });
-// app.get("/show", (req, res) => {
-//   // res.send("view the note")
-//   res.render("./html/show.ejs");
-// });
-// app.get("/showall", (req, res) => {
-//   // res.send("view all notes")
-//   res.render("./html/showall.ejs");
-// });
-// =================================================
-// server
-// =================================================
+app.use((req,res,next) => {
+
+  res.status(404).render('./html/error/404.ejs');
+
+  next();
+});
+
+
+
 app.listen(PORT, () => {
   console.log(`server started at ${PORT}`);
 });

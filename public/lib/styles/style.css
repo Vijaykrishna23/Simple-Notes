@@ -16,12 +16,6 @@ li {
   padding: 0.5em;
 }
 
-.nav-container {
-  text-align: center;
-  margin: 0 auto;
-  background: #393e46;
-}
-
 ul {
   margin: 0;
   display: flex;
@@ -52,9 +46,13 @@ a:hover {
   text-decoration: none;
 }
 
+
+
+
+
 .card {
     display: inline-block;
-    margin: 20px;   
+    margin: 10px;
 }
 
 button{
@@ -63,4 +61,14 @@ button{
     bottom: 0;
     padding: 20px;
     margin: 20px;
+}
+
+#no-notes {
+  position: fixed;
+  margin: auto;
+  top : 50%;
+}
+
+.card-title {
+  text-transform: uppercase;
 }
