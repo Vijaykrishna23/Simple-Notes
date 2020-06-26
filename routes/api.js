@@ -46,7 +46,7 @@ routerApi.put("/edit/:id", (req, res) => {
 routerApi.delete("/delete/:id", (req, res) => {
   Note.findByIdAndDelete(req.params.id)
     .then((val) => res.send(val))
-    .catch((err) => res.sendStatus(204);
+    .catch((err) => res.sendStatus(204));
 });
 
 
