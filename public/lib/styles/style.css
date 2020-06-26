@@ -72,3 +72,9 @@ button{
 .card-title {
   text-transform: uppercase;
 }
+
+.card-text {
+  width: 270px;
+  height: 50px;
+  overflow: hidden;
+}
